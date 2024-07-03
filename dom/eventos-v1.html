@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app" style="display: flex; gap: 24px">
+  <button @click="subtrair">Subtrair 1</button>
+  <h1>{{ contador }}</h1>
+  <button @click="somar">Adicionar 1</button>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      contador: 0,
+    },
+    methods: {
+      somar() {
+        this.contador++;
+      },
+      subtrair() {
+        this.contador--;
+      },
+    },
+  });
+</script>
