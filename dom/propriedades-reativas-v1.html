@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+  <h1>{{ titulo }}</h1>
+  <input type="text" v-model="titulo" />
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      titulo: "Ola Mundo",
+    },
+  });
+</script>
