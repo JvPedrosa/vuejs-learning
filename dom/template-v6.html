@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+  <h1 v-once>{{ titulo }}</h1>
+  <p>{{ saudacao() }}</p>
+  <a :href="link">Google</a>
+  <hr />
+  <div v-html="linkHtml"></div>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      titulo: "Usando VueJS!",
+      link: "https://www.google.com",
+      linkHtml: "<a href='https://www.google.com'>Google</a>",
+    },
+    methods: {
+      saudacao() {
+        this.titulo = "Bom dia!";
+        return this.titulo;
+      },
+    },
+  });
+</script>
