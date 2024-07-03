@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+  <input type="text" v-on:input="updateMessage" />
+  <h1>{{ message }}</h1>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      message: "Hello Vue!",
+    },
+    methods: {
+      updateMessage(event) {
+        this.message = event.target.value;
+      },
+    },
+  });
+</script>
