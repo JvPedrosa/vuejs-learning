@@ -1,0 +1,61 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<style>
+  .box {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .demo {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+  }
+
+  .c1 {
+    background-color: red;
+  }
+
+  .c2 {
+    background-color: green;
+  }
+
+  .c3 {
+    background-color: blue;
+  }
+
+  .girar {
+    transform: rotate(45deg);
+  }
+</style>
+
+<div id="app">
+  <div class="box">
+    <div class="demo" :style="meuEstilo"></div>
+    <div class="demo" :style="meuEstilo"></div>
+    <div class="demo" :style="meuEstilo"></div>
+  </div>
+  <hr />
+  <input type="text" v-model="cor" />
+  <input type="number" v-model="width" />
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      cor: "red",
+      width: 100,
+      height: 100,
+    },
+    computed: {
+      meuEstilo() {
+        return {
+          backgroundColor: this.cor,
+          width: this.width + "px",
+          height: this.height + "px",
+        };
+      },
+    },
+  });
+</script>
