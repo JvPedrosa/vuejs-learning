@@ -1,0 +1,39 @@
+#efeito {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.destaque {
+  background-color: red;
+  width: 200px !important;
+}
+
+.encolher {
+  background-color: gray;
+  width: 50px !important;
+}
+
+.classe1 {
+  background-color: blue;
+}
+
+.classe2 {
+  width: 150px;
+  height: 150px;
+}
+
+.perigo {
+  border: 2px solid red;
+}
+
+.barra {
+  border: 1px solid black;
+  width: 200px;
+  height: 30px;
+}
+
+.progresso {
+  background-color: green;
+  height: 100%;
+}
