@@ -1,0 +1,29 @@
+<meta charset="utf-8" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+  <template v-if="logado">
+    <h1>Olá, {{ usuario }}</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+      voluptates, quidem, quod, quos quas voluptatum quae dolorum
+      exercitationem nemo quibusdam autem. Quisquam voluptates, quidem, quod,
+      quos quas voluptatum quae dolorum exercitationem nemo quibusdam autem.
+    </p>
+  </template>
+  <h1 v-else-if="anonimo">Olá anônimo</h1>
+  <h1 v-else>Nenhum usuário logado</h1>
+  <button @click="logado = !logado">{{ logado ? "Sair" : "Entrar" }}</button>
+  <input type="checkbox" v-model="anonimo" />
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      usuario: "João",
+      logado: false,
+      anonimo: false,
+    },
+  });
+</script>
