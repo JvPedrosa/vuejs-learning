@@ -1,0 +1,49 @@
+<meta charset="utf-8" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<div id="app">
+  <ul>
+    <li v-for="(cor, index) in cores" :key="index">
+      {{ index + 1 }} - {{ cor }}
+    </li>
+  </ul>
+  <hr />
+  <template v-for="(cor, index) in cores" :key="index">
+    <h1>{{cor}}</h1>
+    <p>{{index + 1}}</p>
+  </template>
+  <hr />
+  <ul>
+    <li v-for="pessoa in pessoas">
+      <div v-for="(value, chave, index) in pessoa" :key="index">
+        {{index + 1}}) {{ chave }}: {{ value }}
+      </div>
+    </li>
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      cores: ["azul", "vermelho", "verde", "amarelo"],
+      pessoas: [
+        { nome: "João", idade: 25, peso: 70 },
+        { nome: "Maria", idade: 30, peso: 60 },
+        { nome: "José", idade: 20, peso: 80 },
+      ],
+    },
+  });
+</script>
+
+<style>
+  li {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  h1,
+  p {
+    display: inline;
+  }
+</style>
